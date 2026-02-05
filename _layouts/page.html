@@ -19,42 +19,20 @@ layout: compress
 
     {% include header.html %}
 
-    <div class="hero--small">
+    <div style="background-size:cover;background-repeat:no-repeat;background-position:center;" class="hero--small lazyload" data-bg="{{ site.url }}{{ site.baseurl }}/assets/img/posts/background-demografi.jpg">
+      <!-- <div class="hero__wrap">
+        <h1 class="hero__title">{{ page.title }}</h1>
+      </div> -->
       <div class="hero__wrap">
         <h1 class="hero__title">{{ page.title }}</h1>
+        <!-- <p class="hero__meta"> test</p> -->
       </div>
+    </div>
     </div>
     <main class="site__content">
 
       <div class="container">
         <div class="page-content">
-
-        <div>
-          <canvas id="myChart"></canvas>
-        </div>
-
-<script>
-  const ctx = document.getElementById('myChart');
-
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['0-10', '11-20', '21-30', '31-60', '60++'],
-      datasets: [{
-        label: 'Usia Penduduk',
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
-</script>
 
           {{ content }}
 
