@@ -1,0 +1,156 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
+
+  {% include head.html %}
+
+  <body class="site">
+
+    {% if site.google_tag_manager %}
+
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+
+    {% endif %}
+
+    {% include header.html %}
+
+    <div class="hero--small">
+      <div class="hero__wrap">
+        <h1 class="hero__title">{{ page.title }}</h1>
+      </div>
+    </div>
+    <main class="site__content">
+
+      <div class="container">
+        <div class="page-content">
+
+        <div>
+          <canvas id="pieJenisKelamin"></canvas>
+          <canvas id="barPendidikan"></canvas>
+          <canvas id="pieAgama"></canvas>
+        </div>
+
+<script>
+  const ctx = document.getElementById('pieJenisKelamin');
+
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+    labels: [
+    'Laki-laki',
+    'Perempuan',
+  ],
+  datasets: [{
+    label: 'Persentase Jenis Kelamin',
+    data: [{{page.jumlah-laki-laki }}, {{ page.jumlah-perempuan }}],
+    backgroundColor: [
+      'rgb(54, 162, 235)',
+    'rgb(255, 99, 132)'
+    ],
+    hoverOffset: 4
+  }]
+    },
+    options: {
+        plugins: {
+            title: {
+                display: true,
+                text: ['Persentase Jenis Kelamin', 'Jumlah Penduduk : {{page.jumlah-penduduk}}']
+            }
+        }
+    }
+  });
+
+  const ctd = document.getElementById('barPendidikan');
+
+  new Chart(ctd, {
+    type: 'bar',
+    data: {
+  labels: ['Tidak/Belum Sekolah', 'Belum Tamat SD/Sederajat', "Tamat SD/Sederajat", "SLTP/Sederajat", "SLTA/Sederajat", "Diploma I/II", "Akademi/Diploma 3/S.Muda", "Diploma IV/Strata I"],
+  datasets: [{
+    label: 'Data Penduduk Berdasarkan Jenjang Pendidikan',
+    data: [{{page.jumlah-Tidak-Sekolah}},
+      {{page.jumlah-Belum-Tamat-SD}},
+      {{page.jumlah-Tamat-SD}},
+      {{page.jumlah-SLTP}},
+      {{page.jumlah-SLTA/Sederajat}},
+      {{page.jumlah-DiplomaI-II}},
+      {{page.jumlah-Akademi-Diploma-3}},
+      {{page.jumlah-DiplomaIV}}
+    ],
+    backgroundColor: [
+      'rgba(255, 99, 132, 0.2)',
+      'rgba(255, 159, 64, 0.2)',
+      'rgba(255, 205, 86, 0.2)',
+      'rgba(75, 192, 192, 0.2)',
+      'rgba(54, 162, 235, 0.2)',
+      'rgba(153, 102, 255, 0.2)',
+      'rgba(201, 203, 207, 0.2)'
+    ],
+    borderColor: [
+      'rgb(255, 99, 132)',
+      'rgb(255, 159, 64)',
+      'rgb(255, 205, 86)',
+      'rgb(75, 192, 192)',
+      'rgb(54, 162, 235)',
+      'rgb(153, 102, 255)',
+      'rgb(201, 203, 207)'
+    ],
+    borderWidth: 1
+  }]      
+    },
+    options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  },
+  });
+  
+  const ctg = document.getElementById('pieAgama');
+
+  new Chart(ctg, {
+    type: 'doughnut',
+    data: {
+    labels: [
+    'Islam',
+    'Kristen',
+  ],
+  datasets: [{
+    label: 'Persentase Agama Penduduk',
+    data: [{{page.jumlah-islam}}, {{ page.jumlah-kristen}}],
+    backgroundColor: [
+      'rgb(54, 162, 235)',
+    'rgb(255, 99, 132)'
+    ],
+    hoverOffset: 4
+  }]
+    },
+    options: {
+        plugins: {
+            title: {
+                display: true,
+                text: ['Persentase Agama Penduduk']
+            }
+        }
+    }
+  });
+</script>
+
+          {{ content }}
+
+        </div>
+      </div>
+
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
