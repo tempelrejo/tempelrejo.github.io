@@ -19,7 +19,7 @@ social:
 navigation: # Navigation links
   - {name: 'Home', link: '/'}
   - {name: 'Profil Desa', link: '/profil-desa'}
-  - {name: 'About', link: '/about'}
+  - {name: 'Demografi', link: '/demografi'}
   - {name: 'Contact', link: '/contact'}
 
 tagline: >
