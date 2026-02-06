@@ -4,6 +4,7 @@ author: GitHub User # You :P
 description: > # Meta description of Homepage
   Website menampilkan katalog UMKM yang ada di desa Tempelrejo dan Profil Desa Tempelrejo
 baseurl: "/" # the subpath of your site, e.g. /blog
+kelompok: KKN-R Tim 118 Universitas Diponegoro
 
 url: "https://tempelrejo.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -18,7 +19,7 @@ navigation: # Navigation links
   - {name: 'Home', link: '/'}
   - {name: 'Profil Desa', link: '/profil-desa'}
   - {name: 'Demografi', link: '/demografi'}
-  - {name: 'Contact', link: '/contact'}
+  - {name: 'Kontak', link: '/kontak'}
 
 tagline: >
   Jl. Raya Tanon-Mondokan KM 4 KP.57271

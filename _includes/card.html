@@ -8,7 +8,7 @@
       {% endfor %}
     </span>
   {% endif %}
-  <a href="{{ post.url | relative_url }}">
+  <!-- <a href="{{ post.url | relative_url }}"> -->
     {% if post.featured-img %}
       <figure class="post-card__thumb">
         <img
@@ -24,7 +24,7 @@
         <div class="dark-bg"></div>
       </figure>
     {% endif %}
-  </a>
+  <!-- </a> -->
   <!-- <a class="post-card__inner" href="{{ post.url | relative_url }}"> -->
   <a class="post-card__inner">
     <div class="post-card__header">
@@ -38,12 +38,24 @@
     <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M26.9 206.9L3.7 444.9C1.8 463.7 16.6 480 35.5 480l172.7 0c26.5 0 48-21.5 48-48l0-129c0-8.3 6.7-15 15-15 5.5 0 10.6 3 13.2 7.9l86.1 159c8.4 15.5 24.6 25.1 42.2 25.1l64.1 0c18.9 0 33.7-16.3 31.8-35.1L485.6 207.1c-1.9-19.6-12.8-37.3-29.5-47.8L280.9 48.3c-15.7-10-35.8-9.9-51.5 .1L56.1 159.2c-16.5 10.6-27.3 28.2-29.2 47.7z"/></svg>
       Jenis Usaha : {{ post.usaha }}
     </p>
-    <p href="#">
+    <p onclick="window.location.href='{{post.link-maps}}'"
+    style="color:#0b66ff; text-decoration:underline; -webkit-tap-highlight-color:rgba(11,102,255,0.12); transition:color .12s, background .12s, box-shadow .12s;"
+   onmouseover="this.style.color='#084fd1'; this.style.outline='none'; this.style.boxShadow='0 0 0 3px rgba(11,102,255,0.12)';"
+   onfocus="this.style.color='#084fd1'; this.style.outline='none'; this.style.boxShadow='0 0 0 3px rgba(11,102,255,0.12)';"
+   onmouseout="this.style.color='#0b66ff'; this.style.boxShadow='';"
+   onblur="this.style.color='#0b66ff'; this.style.boxShadow='';"
+    >
     <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M288-16c17.7 0 32 14.3 32 32l0 18.3c98.1 14 175.7 91.6 189.7 189.7l18.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-18.3 0c-14 98.1-91.6 175.7-189.7 189.7l0 18.3c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-18.3C157.9 463.7 80.3 386.1 66.3 288L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l18.3 0C80.3 125.9 157.9 48.3 256 34.3L256 16c0-17.7 14.3-32 32-32zM128 256a160 160 0 1 0 320 0 160 160 0 1 0 -320 0zm160-96a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></svg>
       
       Alamat : {{ post.alamat }}
     </p>
-    <p href="#" onclick="window.location.href='https://wa.me/{{post.nomor-telepon}}'">
+    <p onclick="window.location.href='https://wa.me/{{post.nomor-telepon}}'"
+    style="color:#0b66ff; text-decoration:underline; -webkit-tap-highlight-color:rgba(11,102,255,0.12); transition:color .12s, background .12s, box-shadow .12s;"
+   onmouseover="this.style.color='#084fd1'; this.style.outline='none'; this.style.boxShadow='0 0 0 3px rgba(11,102,255,0.12)';"
+   onfocus="this.style.color='#084fd1'; this.style.outline='none'; this.style.boxShadow='0 0 0 3px rgba(11,102,255,0.12)';"
+   onmouseout="this.style.color='#0b66ff'; this.style.boxShadow='';"
+   onblur="this.style.color='#0b66ff'; this.style.boxShadow='';"
+    >
       <!-- <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:middle; margin-right:6px;">
         <path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-4.418 0-8 2.239-8 5v1h16v-1c0-2.761-3.582-5-8-5z"/>
       </svg> -->
