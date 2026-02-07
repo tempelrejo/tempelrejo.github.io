@@ -49,6 +49,7 @@
       
       Alamat : {{ post.alamat }}
     </p>
+    {% if post.nomor-telepon %}
     <p onclick="window.location.href='https://wa.me/{{post.nomor-telepon}}'"
     style="color:#0b66ff; text-decoration:underline; -webkit-tap-highlight-color:rgba(11,102,255,0.12); transition:color .12s, background .12s, box-shadow .12s;"
    onmouseover="this.style.color='#084fd1'; this.style.outline='none'; this.style.boxShadow='0 0 0 3px rgba(11,102,255,0.12)';"
@@ -63,6 +64,9 @@
     Whatsapp : {{ post.nomor-telepon }}
     
     </p>
+
+    {% endif %}
+
     {% if post.summary %}
       <p>{{ post.summary | strip_html | truncatewords:20 }}</p>
     {% else %}
