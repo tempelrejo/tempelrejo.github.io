@@ -22,7 +22,7 @@ navigation: # Navigation links
   - {name: 'Kontak', link: '/kontak'}
 
 tagline: >
-  Jl. Raya Tanon-Mondokan KM 4 KP.57271
+  Mondokan, Sragen, Jawa Tengah
 
 # hero_img: posts/sleek_lg.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
 hero_img: posts/TempelrejoC.jpeg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg

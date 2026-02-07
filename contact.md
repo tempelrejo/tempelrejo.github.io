@@ -3,18 +3,14 @@ layout: page
 title: Kontak
 permalink: /kontak/
 hero-img: contact.jpg
+email: Pemerintahdesatempelrejo@gmail.com
+jam-buka: Senin–Jumat 08:00 WIB – 12:00 WIB
+location: Jl. Raya Tanon-Mondokan KM 4 KP.57271
+location-link: https://maps.app.goo.gl/VcUN2AaH5XCJiA1m8
 ---
 
-Jekyll is a great tool to create static sites, but there’s no backend to send your data to.
+📧 [{{page.email}}](mailto:Pemerintahdesatempelrejo@gmail.com)<br>
+💬 Agung Dwi Harjanto [WhatsApp: +62 8132-9072-967](https://wa.me/6281329072967)<br>
+🕒 **Jam Buka:** {{page.jam-buka}}<br>
+📍 **Location:**   [{{page.location}}]({{page.location-link}})
 
-However, you can use free SaaS as a backend for forms, such as [Formspree](https://formspree.io/) to handle form submissions. Sleek has a configured form using formspree ready for you. All you have to do is change the email in `.config.yml`.
-
-Check the form below to see it in action!
-
-### Example Formspree contact form with validation and reCaptcha
-
-Fill in the form or [email me](mailto:{{site.email}}) to discuss your next project.
-
-{% include form.html %}
-
-{% include modal.html %}
